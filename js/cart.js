@@ -248,6 +248,8 @@ const CartPage = {
         if (!this.validate()) { e.preventDefault(); return; }
         this.checkoutBtn.href = this.buildWhatsappLink(items);
         this.sendOrderToExternalSite(items);
+        Cart.clear();
+        this.render();
       });
     }
 
