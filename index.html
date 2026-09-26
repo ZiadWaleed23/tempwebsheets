@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elio — Elevating Aesthetic Excellence</title>
+<meta name="description" content="Elio is a curated portfolio of professional aesthetic and beauty products for clinics and skincare professionals.">
+<link rel="icon" type="image/png" href="img/logo.png">
+<!-- First-visit loader (must stay before the stylesheets) -->
+<script src="js/loader.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/hero-split.css">
+<link rel="stylesheet" href="css/categories-carousel.css">
+</head>
+<body>
+
+<!-- ============================= HEADER ============================= -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="brand-mark brand-mark--logo" aria-label="Elio"><img src="img/logo.png" alt="Elio" class="brand-logo"><span class="brand-mark__text js-brand-name">Elio</span></a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <div class="nav-item"><a href="index.html">Home</a></div>
+      <div class="nav-item"><a href="products.html">Products</a></div>
+      <div class="nav-item nav-item--categories">
+        <a href="products.html">Categories</a>
+        <div class="mega-menu js-nav-categories" aria-label="Categories"></div>
+      </div>
+      <div class="nav-item"><a href="about.html">About Us</a></div>
+      <div class="nav-item"><a href="contact.html">Contact</a></div>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn js-open-search" aria-label="Search products">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <a href="cart.html" class="icon-btn" aria-label="View cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="21" r="1.3"/><circle cx="18" cy="21" r="1.3"/><path d="M2.5 3h2.4l2.3 12.4a2 2 0 002 1.6h8.6a2 2 0 002-1.6L21 7H6"/></svg>
+        <span class="cart-count js-cart-count">0</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================= MOBILE NAV ============================= -->
+<nav class="mobile-nav" aria-label="Mobile">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-nav__categories js-nav-categories"></div>
+</nav>
+
+<!-- ============================= HERO ============================= -->
+<section class="hero hero--split">
+  <div class="hero__media">
+    <img src="./img/main.jpg" alt="Professional aesthetic treatment room" width="1800" height="1400">
+    <div class="hero__scrim"></div>
+  </div>
+  <div class="container hero__content">
+    <p class="hero__eyebrow" style="color: rgb(160, 21, 2);">Professional Aesthetic &amp; Beauty Supply</p>
+    <h1 class="hero__title">Elevating Aesthetic Excellence.</h1>
+    <p class="hero__desc">A curated portfolio of professional-grade aesthetic and beauty products, selected for clinics and practitioners who expect precision, quality and discretion.</p>
+    <div class="hero__actions">
+      <a href="products.html" class="btn btn--primary">Explore Products</a>
+      <a href="about.html" class="btn btn--outline">About Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= STATS BAND ============================= -->
+<section class="stats-band" aria-label="Elio in numbers">
+  <div class="stats-band__grid">
+    <div class="stats-band__item">
+      <span class="stats-band__number" data-count-to="500" data-count-suffix="+">150+</span>
+      <span class="stats-band__label">Premium Products</span>
+    </div>
+    <div class="stats-band__item">
+      <span class="stats-band__number" data-count-to="50" data-count-suffix="+">40+</span>
+      <span class="stats-band__label">Trusted Brands</span>
+    </div>
+    <div class="stats-band__item">
+      <span class="stats-band__number" data-count-to="10" data-count-suffix="K+">4K+</span>
+      <span class="stats-band__label">Happy Customers</span>
+    </div>
+    <div class="stats-band__item">
+      <span class="stats-band__number">24/7</span>
+      <span class="stats-band__label">Expert Support</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FEATURED PRODUCTS ============================= -->
+<section class="section section--tight section--taupe">
+  <div class="container">
+    <div class="section__head-row" style="margin-bottom: 32px;">
+      <div class="section__head" style="margin-bottom:0;">
+        <div class="section__eyebrow-line"></div>
+        <h2>Featured Products</h2>
+        <p>A selection currently highlighted across our professional catalog.</p>
+      </div>
+      <a href="products.html" class="btn btn--outline">
+        View All Products
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:6px;vertical-align:-2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="product-grid product-row" id="featured-products-grid"></div>
+  </div>
+</section>
+
+<!-- ============================= CATEGORIES CAROUSEL ============================= -->
+<section class="section">
+  <div class="container">
+    <div class="section__head-row" style="margin-bottom: 40px;">
+      <div class="section__head" style="margin-bottom:0;">
+        <div class="section__eyebrow-line"></div>
+        <h2>Our Categories</h2>
+        <p>Explore our professional portfolio by treatment category.</p>
+      </div>
+      <a href="products.html" class="btn btn--outline">
+        View All
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:6px;vertical-align:-2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="cat-carousel">
+      <button class="cat-carousel__arrow cat-carousel__arrow--prev" id="cat-prev" aria-label="Previous categories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="cat-carousel__track" id="categories-carousel-track"></div>
+      <button class="cat-carousel__arrow cat-carousel__arrow--next" id="cat-next" aria-label="Next categories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= WHY CHOOSE US ============================= -->
+<section class="section section--charcoal">
+  <div class="container">
+    <div class="section__head">
+      <div class="section__eyebrow-line"></div>
+      <h2>Why Choose Us</h2>
+      <p>A supply partner built around precision, not volume.</p>
+    </div>
+  </div>
+  <div class="value-grid">
+    <div class="value-item">
+      <div class="value-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9h18M8 4v5"/></svg></div>
+      <h3>Curated Product Portfolio</h3>
+      <p>Every product in our catalog is selected with a clear category role in mind, not added for volume alone.</p>
+    </div>
+    <div class="value-item">
+      <div class="value-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/></svg></div>
+      <h3>Professional Focus</h3>
+      <p>Built for clinics, practitioners and skincare professionals — not general consumer retail.</p>
+    </div>
+    <div class="value-item">
+      <div class="value-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 5-5.5"/></svg></div>
+      <h3>Quality-Oriented Selection</h3>
+      <p>Products are chosen with an emphasis on formulation quality and consistency across categories.</p>
+    </div>
+    <div class="value-item">
+      <div class="value-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 20v-2a6 6 0 0112 0v2"/><circle cx="10" cy="7" r="3.5"/><path d="M17 20v-1.5a4.5 4.5 0 00-3-4.24"/><path d="M14.5 3.6a3.5 3.5 0 010 6.8"/></svg></div>
+      <h3>Reliable Support</h3>
+      <p>A responsive team ready to assist with product information and ordering questions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CONTACT CTA ============================= -->
+<section class="contact-cta">
+  <div class="container">
+    <h2>Let's Talk About Your Product Needs.</h2>
+    <p>Reach out for product information, availability, or to discuss a professional order.</p>
+    <a href="contact.html" class="btn btn--primary">Contact Us</a>
+  </div>
+</section>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-mark brand-mark--logo footer-logo"><img src="img/logo.png" alt="Elio" class="brand-logo brand-logo--footer"></span>
+        <p class="js-brand-desc">A curated portfolio of professional aesthetic and beauty products, selected for clinics and skincare professionals who expect more.</p>
+        <div class="footer-social">
+          <a href="#" class="js-social-instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" class="js-social-facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 9h3V6h-3c-2 0-3.5 1.5-3.5 3.5V12H8v3h2.5v6h3v-6H16l.5-3h-3V9.8c0-.5.3-.8.8-.8z"/></svg></a>
+          <a href="#" class="js-social-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1"/><path d="M8 11v6M12 11v6M12 13.5c0-1.5 1-2.5 2.5-2.5s2.5 1 2.5 2.5V17"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul class="js-footer-categories"></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <address>
+          <a class="js-contact-email" href="#">hello@elio.com</a><br><br>
+          <a class="js-contact-phone" href="#">+1 (555) 019-2044</a><br><br>
+          <span class="js-contact-location">Hadaek Al-Ahram - 118</span>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span class="js-year"></span> <span class="js-brand-name">Elio</span>. All rights reserved.</span>
+      <div class="footer-bottom__links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- ============================= SEARCH OVERLAY ============================= -->
+<div class="search-overlay" id="search-overlay" aria-hidden="true">
+  <div class="search-overlay__panel">
+    <div class="search-overlay__top">
+      <form class="search-overlay__form" id="search-overlay-form">
+        <input type="text" id="search-overlay-input" placeholder="Search products, brands, categories…" autocomplete="off">
+        <button type="button" class="search-overlay__clear" id="search-overlay-clear" aria-label="Clear search">&times;</button>
+      </form>
+      <button class="search-overlay__close" id="search-overlay-close" aria-label="Close search">&times;</button>
+    </div>
+    <p class="search-overlay__count" id="search-overlay-count">Start typing to search products, brands and categories.</p>
+    <div class="search-overlay__results" id="search-overlay-results"></div>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/prices.js"></script>
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/search.js"></script>
+<script src="js/categories-carousel.js"></script>
+<script src="js/animations.js"></script>
+</body>
+</html>
